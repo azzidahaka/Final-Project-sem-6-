@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">Final Project</string>
+    <string name="app_name">AHand</string>
+    <string name="employee">Employee</string>
+    <string name="customer">Customer</string>
+    <string name="sign_in">Sign-In</string>
+    <string name="sign_out">Sign-Out</string>
+    <string name="scan">Scan</string>
+    <string name="add">Add New Item</string>
+    <string name="cancel">Cancel</string>
+    <string name="inspect">Find Product</string>
+    <string name="product_info">Product Info</string>
+    <string name="edit_product">Edit Product</string>
+    <string name="edit">Edit</string>
+    <string name="choose">Choose Store</string>
+    <string name="user_info">Your Info</string>
+    <string name="basic_info">Basic Info</string>
+    <string name="detailed_info">Detailed Info</string>
+    <string name="back_to_scanner">Back To Scanner</string>
+    <string name="user_name">User Name</string>
+    <string name="preferred_store">Preferred Store</string>
 </resources>
