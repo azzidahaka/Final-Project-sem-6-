@@ -20,4 +20,9 @@
     <string name="back_to_scanner">Back To Scanner</string>
     <string name="user_name">User Name</string>
     <string name="preferred_store">Preferred Store</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_size">Size:</string>
+    <string name="product_qty">Quantity On Hand:</string>
+    <string name="product_expire">Expire Date:</string>
+    <string name="product_price">Product Price:</string>
 </resources>
