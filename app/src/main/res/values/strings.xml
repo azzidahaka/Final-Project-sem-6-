@@ -25,4 +25,5 @@
     <string name="product_qty">Quantity On Hand:</string>
     <string name="product_expire">Expire Date:</string>
     <string name="product_price">Product Price:</string>
+    <string name="click_focus">Click when focused</string>
 </resources>
