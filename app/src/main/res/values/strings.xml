@@ -30,4 +30,6 @@
     <string name="back_main">Back To Main</string>
     <string name="hello">Hello</string>
     <string name="default_name">Guest</string>
+    <string name="hint_store_name">preferred store name</string>
+    <string name="hint_user_name">type your name</string>
 </resources>

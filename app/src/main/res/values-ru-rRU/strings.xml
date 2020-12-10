@@ -31,4 +31,6 @@
     <string name="back_main">Назад на Главную</string>
     <string name="hello">Привет</string>
     <string name="default_name">Покупатель</string>
+    <string name="hint_store_name">название магазина</string>
+    <string name="hint_user_name">введите ваше имя</string>
 </resources>
