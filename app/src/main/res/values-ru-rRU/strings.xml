@@ -15,7 +15,7 @@
     <string name="edit_product">Изменить Продукт</string>
     <string name="edit">Изменить</string>
     <string name="choose">Выбрать Магазин</string>
-    <string name="user_info">Информация о Пользователе</string>
+    <string name="user_info">Информация о Покупателе</string>
     <string name="basic_info">Общая Информация</string>
     <string name="detailed_info">Подробная Игформация</string>
     <string name="back_to_scanner">Назад к Сканеру</string>

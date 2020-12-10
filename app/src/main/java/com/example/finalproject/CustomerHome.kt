@@ -13,7 +13,7 @@ class CustomerHome : AppCompatActivity() {
         setContentView(R.layout.activity_customer_home)
 
         val userName = intent.getStringExtra("USER_NAME")
-        if(userName === null)
+        if(userName === null || userName.isBlank())
         {
             findViewById<TextView>(R.id.textViewUserActualName).text = getString(R.string.hello) + "  " + getString(
                 R.string.default_name
@@ -39,6 +39,7 @@ class CustomerHome : AppCompatActivity() {
         //call camera activity
         val intent = Intent(this, CameraOpen::class.java)
         startActivity(intent)
+        finish()
     }
 
     fun onCustomerInfoClick(view: View) {
