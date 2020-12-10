@@ -6,25 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".CustomerHome">
 
-    <EditText
-        android:id="@+id/editTextCustomerName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textViewChooseStore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="@string/choose"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCustomerName" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUserActualName" />
 
     <Button
         android:id="@+id/scanCodeButton"
@@ -41,10 +31,22 @@
         android:id="@+id/userInfoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onCustomerInfoClick"
         android:text="@string/user_info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scanCodeButton" />
+        app:layout_constraintTop_toBottomOf="@+id/scanCodeButton"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/textViewUserActualName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

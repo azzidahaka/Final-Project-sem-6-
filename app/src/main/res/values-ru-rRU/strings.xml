@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AHand</string>
+    <string name="greet">Добро Пожаловать!!!</string>
+    <string name="employee">Сотрудник</string>
+    <string name="customer">Покупатель</string>
+    <string name="sign_in">Войти</string>
+    <string name="sign_out">Выйти</string>
+    <string name="scan">Сканировать</string>
+    <string name="new_info">Данные Нового Продукта</string>
+    <string name="add">Добавить Новый Продукт</string>
+    <string name="cancel">Отменить</string>
+    <string name="inspect">Найти Продукт</string>
+    <string name="product_info">Информация О Продукте</string>
+    <string name="edit_product">Изменить Продукт</string>
+    <string name="edit">Изменить</string>
+    <string name="choose">Выбрать Магазин</string>
+    <string name="user_info">Информация о Пользователе</string>
+    <string name="basic_info">Общая Информация</string>
+    <string name="detailed_info">Подробная Игформация</string>
+    <string name="back_to_scanner">Назад к Сканеру</string>
+    <string name="user_name">Ваше Имя</string>
+    <string name="preferred_store">Предпочитаемый Магазин</string>
+    <string name="product_name">Название Продукта</string>
+    <string name="product_size">Размер:</string>
+    <string name="product_qty">Кол-во в наличие:</string>
+    <string name="product_expire">Срок годности:</string>
+    <string name="product_price">Стоимость</string>
+    <string name="click_focus">Нажать при фокусе</string>
+    <string name="back_product">Назад к Продукту</string>
+    <string name="back_main">Назад на Главную</string>
+    <string name="hello">Привет</string>
+    <string name="default_name">Покупатель</string>
+</resources>

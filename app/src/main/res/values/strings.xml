@@ -26,4 +26,8 @@
     <string name="product_expire">Expire Date:</string>
     <string name="product_price">Product Price:</string>
     <string name="click_focus">Click when focused</string>
+    <string name="back_product">Back To Product</string>
+    <string name="back_main">Back To Main</string>
+    <string name="hello">Hello</string>
+    <string name="default_name">Guest</string>
 </resources>

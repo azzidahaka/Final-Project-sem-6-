@@ -1,7 +1,9 @@
 package com.example.finalproject
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -9,6 +11,18 @@ class CustomerHome : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_home)
+
+        val userName = intent.getStringExtra("USER_NAME")
+        if(userName === null)
+        {
+            findViewById<TextView>(R.id.textViewUserActualName).text = getString(R.string.hello) + "  " + getString(
+                R.string.default_name
+            );
+        }
+        else
+        {
+            findViewById<TextView>(R.id.textViewUserActualName).text = getString(R.string.hello) + "  " + userName;
+        }
     }
 //
 //    lateinit var mCamera: Camera
@@ -22,6 +36,13 @@ class CustomerHome : AppCompatActivity() {
 //
 
     fun onScannerClick(view: View) {
-        //call another activity
+        //call camera activity
+        val intent = Intent(this, CameraOpen::class.java)
+        startActivity(intent)
+    }
+
+    fun onCustomerInfoClick(view: View) {
+        val intent = Intent(this, CustomerInfo::class.java)
+        startActivity(intent)
     }
 }
