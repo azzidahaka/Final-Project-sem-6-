@@ -1,5 +1,6 @@
 package com.example.finalproject
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,7 +18,14 @@ class EmployeeItemInfo : AppCompatActivity() {
         setContentView(R.layout.activity_employee_item_info)
     }
 
-    fun onCancelClick(view: View) {}
-    fun onEditItemClick(view: View) {}
+    fun onCancelClick(view: View) {
+        val intent = Intent(this, EmployeeHome::class.java)
+        startActivity(intent)
+        finish()
+    }
+    fun onEditItemClick(view: View) {
+        val intent = Intent(this, EmployeeEditItem::class.java)
+        startActivity(intent)
+    }
 
 }

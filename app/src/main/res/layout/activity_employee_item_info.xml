@@ -11,13 +11,13 @@
         android:id="@+id/buttonEditItemInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="4dp"
         android:onClick="onEditItemClick"
         android:text="@string/edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBarcode"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQtyInfoEdit"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -30,9 +30,9 @@
         android:text="@string/cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonEditItemInfo"
-        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBarcode"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQtyInfoEdit"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText

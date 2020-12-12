@@ -94,7 +94,7 @@ class EmployeeNewItem : AppCompatActivity() {
 
         if( allGood === true)
         {
-            val myRef = CustomerHome.database.reference.child("store").child("ProductData").child("NewItem" + itemBarCode.text)
+            val myRef = MainActivity.database.reference.child("store").child("ProductData").child("NewItem" + itemBarCode.text)
             myRef.child(getString(R.string.path_name)).setValue(itemName.text.toString())
             myRef.child(getString(R.string.path_size)).setValue(itemSize.text.toString())
             myRef.child(getString(R.string.path_exp_date)).setValue(itemExpDate.text.toString())

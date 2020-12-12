@@ -19,7 +19,7 @@ class CustomerInfo : AppCompatActivity() {
     }
     private fun readFromDatabase()
     {
-        val myRef = CustomerHome.database.reference.child("store").child("name")
+        val myRef = MainActivity.database.reference.child("store").child("name")
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 // This method is called once with the initial value and again
