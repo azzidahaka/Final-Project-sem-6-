@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1010089073094",
+    "project_id": "ahand-9600",
+    "storage_bucket": "ahand-9600.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010089073094:android:fda2bba0f7ce6e899e3ac7",
+        "android_client_info": {
+          "package_name": "com.example.finalproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010089073094-m22kh90cl69ee8tgknlraedqjkbo6pqp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWfrF057EabLGmTu37f8j1XKffTQebCr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010089073094-m22kh90cl69ee8tgknlraedqjkbo6pqp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
