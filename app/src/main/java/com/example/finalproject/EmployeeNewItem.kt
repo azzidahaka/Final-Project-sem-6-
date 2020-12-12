@@ -95,12 +95,19 @@ class EmployeeNewItem : AppCompatActivity() {
         if( allGood === true)
         {
             val myRef = CustomerHome.database.reference.child("store").child("ProductData").child("NewItem" + itemBarCode.text)
-            myRef.child("Name").setValue(itemName.text.toString())
-            myRef.child("Size").setValue(itemSize.text.toString())
-            myRef.child("ExpireDate").setValue(itemExpDate.text.toString())
-            myRef.child("Barcode").setValue(itemBarCode.text.toString())
-            myRef.child("DetailsInfo").setValue(itemDetails.text.toString())
-            myRef.child("Quantity").setValue(itemQty.text.toString())
+            myRef.child(getString(R.string.path_name)).setValue(itemName.text.toString())
+            myRef.child(getString(R.string.path_size)).setValue(itemSize.text.toString())
+            myRef.child(getString(R.string.path_exp_date)).setValue(itemExpDate.text.toString())
+            myRef.child(getString(R.string.path_barcode)).setValue(itemBarCode.text.toString())
+            myRef.child(getString(R.string.path_details)).setValue(itemDetails.text.toString())
+            myRef.child(getString(R.string.path_qty)).setValue(itemQty.text.toString())
+            AlertDialog.Builder(this)
+                .setTitle("Saved!")
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+            val intent = Intent(this, EmployeeHome::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

@@ -39,4 +39,11 @@
     <string name="item_barcode">item barcode</string>
     <string name="item_detail_info">item details</string>
     <string name="item_qty">quantity</string>
+    <string name="path_name" translatable="false">Name</string>
+    <string name="path_size" translatable="false">Size</string>
+    <string name="path_exp_date" translatable="false">ExpireDate</string>
+    <string name="path_barcode" translatable="false">Barcode</string>
+    <string name="path_details" translatable="false">DetailsInfo</string>
+    <string name="path_qty" translatable="false">Quantity</string>
+
 </resources>
