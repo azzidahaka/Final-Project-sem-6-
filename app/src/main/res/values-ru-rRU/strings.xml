@@ -17,7 +17,7 @@
     <string name="choose">Выбрать Магазин</string>
     <string name="user_info">Информация о Покупателе</string>
     <string name="basic_info">Общая Информация</string>
-    <string name="detailed_info">Подробная Игформация</string>
+    <string name="detailed_info">Подробная Информация</string>
     <string name="back_to_scanner">Назад к Сканеру</string>
     <string name="user_name">Ваше Имя</string>
     <string name="preferred_store">Предпочитаемый Магазин</string>
@@ -40,4 +40,6 @@
     <string name="item_barcode">код продукта</string>
     <string name="item_detail_info">детали</string>
     <string name="item_qty">количество</string>
+    <string name="item_info">Информация о Продукте</string>
+    <string name="update_item">Обновить Информацию</string>
 </resources>

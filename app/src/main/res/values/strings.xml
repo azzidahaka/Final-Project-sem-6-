@@ -15,8 +15,10 @@
     <string name="edit_product">Edit Product</string>
     <string name="edit">Edit</string>
     <string name="user_info">Customer Info</string>
+    <string name="item_info">Item Info</string>
     <string name="basic_info">Basic Info</string>
     <string name="detailed_info">Detailed Info</string>
+    <string name="update_item">Update Item</string>
     <string name="back_to_scanner">Back To Scanner</string>
     <string name="user_name">User Name</string>
     <string name="preferred_store">Preferred Store</string>
