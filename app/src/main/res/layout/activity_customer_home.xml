@@ -6,26 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".CustomerHome">
 
-    <TextView
-        android:id="@+id/textViewChooseStore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/choose"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewUserActualName" />
-
     <Button
         android:id="@+id/scanCodeButton"
         android:layout_width="183dp"
         android:layout_height="120dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="156dp"
         android:onClick="onScannerClick"
         android:text="@string/scan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewChooseStore" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUserActualName" />
 
     <Button
         android:id="@+id/userInfoButton"
