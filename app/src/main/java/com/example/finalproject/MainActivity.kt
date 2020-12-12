@@ -14,5 +14,12 @@ class MainActivity : AppCompatActivity() {
     fun onCustomerClick(view: View) {
         val intent = Intent(this, CustomerHome::class.java)
         startActivity(intent)
+        finish()
+    }
+
+    fun onEmployeeClick(view: View) {
+        val intent = Intent(this, EmployeeHome::class.java)
+        startActivity(intent)
+        finish()
     }
 }

@@ -7,9 +7,10 @@
     tools:context=".EmployeeHome">
 
     <Button
-        android:id="@+id/scan"
+        android:id="@+id/buttonScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onScanClick"
         android:text="@string/scan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,14 +18,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/addnew"
+        android:id="@+id/buttonAddNewItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onAddItemClick"
         android:text="@string/add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scan"
+        app:layout_constraintTop_toBottomOf="@+id/buttonScan"
         app:layout_constraintVertical_bias="0.945" />
 </androidx.constraintlayout.widget.ConstraintLayout>

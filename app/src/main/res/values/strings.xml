@@ -8,6 +8,7 @@
     <string name="scan">Scan</string>
     <string name="new_info">New Item Info</string>
     <string name="add">Add New Item</string>
+    <string name="save">Save New Item</string>
     <string name="cancel">Cancel</string>
     <string name="inspect">Find Product</string>
     <string name="product_info">Product Info</string>
@@ -32,4 +33,10 @@
     <string name="default_name">Guest</string>
     <string name="hint_store_name">preferred store name</string>
     <string name="hint_user_name">type your name</string>
+    <string name="item_name">item name</string>
+    <string name="item_size">item size</string>
+    <string name="item_expire_date">expire date</string>
+    <string name="item_barcode">item barcode</string>
+    <string name="item_detail_info">item details</string>
+    <string name="item_qty">quantity</string>
 </resources>

@@ -60,7 +60,7 @@ class CustomerHome : AppCompatActivity() {
         readFromDatabase()
     }
 
-    fun readFromDatabase()
+    private fun readFromDatabase()
     {
         val myRef = database.reference.child("store")
         myRef.addValueEventListener(object : ValueEventListener {
@@ -76,17 +76,5 @@ class CustomerHome : AppCompatActivity() {
                 Log.w(TAG, "Failed to read value.", error.toException())
             }
         })
-    }
-
-
-    fun basicWrite() {
-        // [START write_message]
-        // Write a message to the database
-
-        val myRef = database.reference.child("store")
-
-        myRef.setValue("Hello, World!")
-        // [END write_message]
-
     }
 }

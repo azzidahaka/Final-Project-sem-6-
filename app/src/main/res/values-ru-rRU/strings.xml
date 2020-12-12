@@ -33,4 +33,11 @@
     <string name="default_name">Покупатель</string>
     <string name="hint_store_name">название магазина</string>
     <string name="hint_user_name">введите ваше имя</string>
+    <string name="save">Сохранить</string>
+    <string name="item_name">название продукта</string>
+    <string name="item_size">размер продукта</string>
+    <string name="item_expire_date">срок годности</string>
+    <string name="item_barcode">код продукта</string>
+    <string name="item_detail_info">детали</string>
+    <string name="item_qty">количество</string>
 </resources>
