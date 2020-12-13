@@ -36,8 +36,10 @@ class EmployeeHome : AppCompatActivity() {
 //                Toast.makeText(this, "Scanned -> " + result.contents, Toast.LENGTH_SHORT)
 //                        .show()
                 //itemIdEmployee.text = result.contents
-                intent.putExtra ( "ITEM_ID", result.contents );
+
+                println("BEEEEEEEEEEEFFFFFFFOOOOOORRRRRRRREEEE!!!!" + result.contents);
                 val intent = Intent(this, EmployeeItemInfo::class.java)
+                intent.putExtra ( "ITEM_ID", result.contents );
                 startActivity(intent)
             }
         } else {
