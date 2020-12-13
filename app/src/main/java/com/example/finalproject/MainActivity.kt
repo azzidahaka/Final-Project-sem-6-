@@ -19,12 +19,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    //choose customer
     fun onCustomerClick(view: View) {
         val intent = Intent(this, CustomerHome::class.java)
         startActivity(intent)
         finish()
     }
 
+    //choose employee
     fun onEmployeeClick(view: View) {
         val intent = Intent(this, EmployeeHome::class.java)
         startActivity(intent)
