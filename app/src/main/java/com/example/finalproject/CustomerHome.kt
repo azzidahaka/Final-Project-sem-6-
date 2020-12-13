@@ -15,6 +15,7 @@ class CustomerHome : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer_home)
 
+        //retrieve User Name(changed in Customer Details)
         val userName = intent.getStringExtra("USER_NAME")
         if(userName === null || userName.isBlank())
         {
@@ -28,6 +29,7 @@ class CustomerHome : AppCompatActivity() {
         }
     }
 
+    //open the actual scanner to scan the barcode
     fun onScannerClick(view: View) {
         val intentIntegrator = IntentIntegrator(this@CustomerHome)
         intentIntegrator.setBeepEnabled(false)
@@ -37,6 +39,7 @@ class CustomerHome : AppCompatActivity() {
         intentIntegrator.initiateScan()
     }
 
+    //results on scanner
     override fun onActivityResult(
         requestCode: Int,
         resultCode: Int,
@@ -56,6 +59,7 @@ class CustomerHome : AppCompatActivity() {
         }
     }
 
+    //open Customer Info Activity
     fun onCustomerInfoClick(view: View) {
         val intent = Intent(this, CustomerInfo::class.java)
         startActivity(intent)

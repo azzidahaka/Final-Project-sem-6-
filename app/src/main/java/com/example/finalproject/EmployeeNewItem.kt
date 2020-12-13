@@ -16,7 +16,7 @@ class EmployeeNewItem : AppCompatActivity() {
     }
 
     fun onSaveItemClick(view: View) {
-        basicWrite()
+        addNewItem()
     }
     fun onCancelClick(view: View) {
         val intent = Intent(this, EmployeeHome::class.java)
@@ -24,7 +24,8 @@ class EmployeeNewItem : AppCompatActivity() {
         finish()
     }
 
-    private fun basicWrite() {
+    //adding new product to the db
+    private fun addNewItem() {
         var allGood = true
         val itemName = findViewById<EditText>(R.id.editTextItemName)
         val itemSize = findViewById<EditText>(R.id.editTextSize)
@@ -34,6 +35,7 @@ class EmployeeNewItem : AppCompatActivity() {
         val itemQty = findViewById<EditText>(R.id.editTextQty)
         val itemPrice = findViewById<EditText>(R.id.editTextPrice)
 
+        //check if nothing left blank
         if(itemName === null || itemName.text.isBlank())
         {
             allGood = false
@@ -102,6 +104,7 @@ class EmployeeNewItem : AppCompatActivity() {
             allGood = true
         }
 
+        //store data into the db; paths for each property are already stored in the String resources file
         if( allGood === true)
         {
             val myRef = MainActivity.database.reference.child("store").child("ProductData").child("NewItem" + itemBarCode.text)

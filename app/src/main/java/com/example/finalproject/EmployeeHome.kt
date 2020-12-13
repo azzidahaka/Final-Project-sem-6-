@@ -14,6 +14,7 @@ class EmployeeHome : AppCompatActivity() {
         setContentView(R.layout.activity_employee_home)
     }
 
+    //
     fun onScanClick(view: View) {
         val intentIntegrator = IntentIntegrator(this@EmployeeHome)
         intentIntegrator.setBeepEnabled(false)
@@ -23,6 +24,7 @@ class EmployeeHome : AppCompatActivity() {
         intentIntegrator.initiateScan()
     }
 
+    //getting scanning results
     override fun onActivityResult(
             requestCode: Int,
             resultCode: Int,
@@ -42,6 +44,7 @@ class EmployeeHome : AppCompatActivity() {
         }
     }
 
+    //go to add item activity
     fun onAddItemClick(view: View) {
         val intent = Intent(this, EmployeeNewItem::class.java)
         startActivity(intent)

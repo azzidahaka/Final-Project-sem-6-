@@ -16,6 +16,8 @@ class CustomerInfo : AppCompatActivity() {
         setContentView(R.layout.activity_customer_info)
         readFromDatabase()
     }
+
+    //read store name from database
     private fun readFromDatabase()
     {
         val myRef = MainActivity.database.reference.child("store").child("name")
@@ -33,6 +35,7 @@ class CustomerInfo : AppCompatActivity() {
         })
     }
 
+    //go back to customer home with data for username
     fun onBackMainClick(view: View) {
         //call camera activity
         val intent = Intent(this, CustomerHome::class.java)

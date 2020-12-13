@@ -25,6 +25,7 @@ class CustomerProductInfo : AppCompatActivity() {
         finish()
     }
 
+    //read all the product data from database and show it in text views
     private fun readItemFromDatabase()
     {
         val myRef = MainActivity.database.reference.child("store").child("ProductData").child(

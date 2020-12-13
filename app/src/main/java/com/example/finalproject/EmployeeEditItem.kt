@@ -16,6 +16,7 @@ class EmployeeEditItem : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_employee_edit_item)
 
+        //call to get all data for the current item
         getAllData();
     }
 
@@ -25,10 +26,12 @@ class EmployeeEditItem : AppCompatActivity() {
         finish()
     }
 
+    //submit our updates
     fun onUpdateItemClick(view: View) {
         saveUpdates()
     }
 
+    //getting data and storing it into views
     private fun getAllData() {
         val myRef = MainActivity.database.reference.child("store").child("ProductData")
             .child("NewItem" + intent.getStringExtra("ITEM_EDIT"))
@@ -52,6 +55,7 @@ class EmployeeEditItem : AppCompatActivity() {
         })
     }
 
+    //read all properties and send data to the database
     private fun saveUpdates() {
         var allGood = true
         val itemName = findViewById<EditText>(R.id.editNameblBL)
@@ -115,6 +119,7 @@ class EmployeeEditItem : AppCompatActivity() {
             allGood = true
         }
 
+        //if nothing left blank
         if (allGood === true) {
             val myRef = MainActivity.database.reference.child("store").child("ProductData")
                 .child("NewItem" + itemBarCode.text)

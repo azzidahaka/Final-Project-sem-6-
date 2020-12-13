@@ -17,6 +17,7 @@ class CustomerProductDetailedInfo : AppCompatActivity() {
         readItemFromDatabase()
     }
 
+    //go back to product
     fun onBackProductClick(view: View) {
         //call camera activity
         val intent = Intent(this, CustomerProductInfo::class.java)
@@ -24,6 +25,7 @@ class CustomerProductDetailedInfo : AppCompatActivity() {
         finish()
     }
 
+    //read itemid from database for the detail info
     private fun readItemFromDatabase()
     {
         val myRef = MainActivity.database.reference.child("store").child("ProductData").child("NewItem" + intent.getStringExtra("CUSTOMER_DETAIL_ID"))
@@ -40,6 +42,7 @@ class CustomerProductDetailedInfo : AppCompatActivity() {
             }
         })
     }
+
 
     fun onBackScannerClick(view: View) {
         //call camera activity

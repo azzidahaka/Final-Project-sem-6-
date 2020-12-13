@@ -11,17 +11,21 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 
 class EmployeeItemInfo : AppCompatActivity() {
-   // lateinit var pushing
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_employee_item_info)
         readItemFromDatabase()
     }
 
+    //reading the results of scanning from the database
+    //the function logic is the same for every read from db
     private fun readItemFromDatabase()
     {
+        //we already obtain path from db, now we need to get path fro particular store and their products
         val myRef = MainActivity.database.reference.child("store").child("ProductData").child("NewItem" + intent.getStringExtra("ITEM_ID"))
         myRef.addValueEventListener(object : ValueEventListener {
+            //will have a snaphot of our data retrieved by the path
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
