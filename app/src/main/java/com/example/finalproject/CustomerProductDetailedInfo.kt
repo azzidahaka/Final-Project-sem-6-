@@ -26,7 +26,7 @@ class CustomerProductDetailedInfo : AppCompatActivity() {
 
     private fun readItemFromDatabase()
     {
-        val myRef = MainActivity.database.reference.child("store").child("ProductData").child("NewItem" + intent.getStringExtra("CUSTOMER_ITEM_ID"))
+        val myRef = MainActivity.database.reference.child("store").child("ProductData").child("NewItem" + intent.getStringExtra("CUSTOMER_DETAIL_ID"))
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 // This method is called once with the initial value and again

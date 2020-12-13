@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.EditText
 import android.widget.TextView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -48,7 +47,8 @@ class CustomerProductInfo : AppCompatActivity() {
 
     fun onDetailedInfoClick(view: View) {
         //call detail info activity
-        val intent = Intent(this, CustomerProductDetailedInfo::class.java)
-        startActivity(intent)
+        val intentNext = Intent(this, CustomerProductDetailedInfo::class.java)
+        intentNext.putExtra ( "CUSTOMER_DETAIL_ID", intent.getStringExtra("CUSTOMER_ITEM_ID") );
+        startActivity(intentNext)
     }
 }
