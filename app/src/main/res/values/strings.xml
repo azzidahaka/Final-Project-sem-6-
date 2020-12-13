@@ -46,5 +46,8 @@
     <string name="path_barcode" translatable="false">Barcode</string>
     <string name="path_details" translatable="false">DetailsInfo</string>
     <string name="path_qty" translatable="false">Quantity</string>
+    <string name="button1" translatable="false">process</string>
+    <string name="tut" translatable="false">Tutorial POint</string>
+    <string name="code" translatable="false">codeview</string>
 
 </resources>
