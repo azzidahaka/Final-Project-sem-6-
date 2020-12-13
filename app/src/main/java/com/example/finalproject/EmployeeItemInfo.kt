@@ -16,7 +16,6 @@ class EmployeeItemInfo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_employee_item_info)
         readItemFromDatabase()
-
     }
 
     private fun readItemFromDatabase()
@@ -48,9 +47,9 @@ class EmployeeItemInfo : AppCompatActivity() {
         finish()
     }
     fun onEditItemClick(view: View) {
-        val intent = Intent(this, EmployeeEditItem::class.java)
-        //intent.putExtra ( "ITEM_edit",  intent.getStringExtra("ITEM_ID"));
-        startActivity(intent)
+        val intentNext = Intent(this, EmployeeEditItem::class.java)
+        intentNext.putExtra ( "ITEM_EDIT",  intent.getStringExtra("ITEM_ID"));
+        startActivity(intentNext)
     }
 
 }

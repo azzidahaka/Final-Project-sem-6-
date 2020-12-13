@@ -20,8 +20,6 @@ class EmployeeEditItem : AppCompatActivity() {
         getAllData();
     }
 
-    lateinit var myCode:Text//will be used to get scanner item
-
     fun onCancelClick(view: View) {
         val intent = Intent(this, EmployeeItemInfo::class.java)
         startActivity(intent)
@@ -29,14 +27,13 @@ class EmployeeEditItem : AppCompatActivity() {
     }
 
     fun onUpdateItemClick(view: View) {
-
-
+        saveUpdates()
     }
 
     private fun getAllData()
     {
-        println("AAAAAAAAAAAAAAFFFTTTTTTTTTEEERRRRRRRRRRRR!!!!" +  intent.getStringExtra("ITEM_ID"));
-        val myRef = MainActivity.database.reference.child("store").child("ProductData").child("NewItem" + intent.getStringExtra("ITEM_ID"))
+        //println("AAAAAAAAAAAAAAFFFTTTTTTTTTEEERRRRRRRRRRRR!!!!" +  intent.getStringExtra("ITEM_ID"));
+        val myRef = MainActivity.database.reference.child("store").child("ProductData").child("NewItem" + intent.getStringExtra("ITEM_EDIT"))
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 // This method is called once with the initial value and again
@@ -47,7 +44,8 @@ class EmployeeEditItem : AppCompatActivity() {
                 findViewById<EditText>(R.id.editBarcode).setText(dataSnapshot.child(getString(R.string.path_barcode)).value.toString())
                 findViewById<EditText>(R.id.editDetail).setText(dataSnapshot.child(getString(R.string.path_details)).value.toString())
                 findViewById<EditText>(R.id.editQty).setText(dataSnapshot.child(getString(R.string.path_qty)).value.toString())
-                println(dataSnapshot.child("Name").value)
+                findViewById<EditText>(R.id.editPrice).setText(dataSnapshot.child(getString(R.string.path_price)).value.toString())
+                //println(dataSnapshot.child("Name").value)
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -56,7 +54,8 @@ class EmployeeEditItem : AppCompatActivity() {
             }
         })
     }
-    private fun basicWrite() {
+
+    private fun saveUpdates() {
         var allGood = true
         val itemName = findViewById<EditText>(R.id.editNameblBL)
         val itemSize = findViewById<EditText>(R.id.editExpire)
@@ -64,6 +63,7 @@ class EmployeeEditItem : AppCompatActivity() {
         val itemBarCode = findViewById<EditText>(R.id.editBarcode)
         val itemDetails = findViewById<EditText>(R.id.editDetail)
         val itemQty = findViewById<EditText>(R.id.editQty)
+        val itemPrice= findViewById<EditText>(R.id.editPrice)
 
         if(itemName === null || itemName.text.isBlank())
         {
@@ -119,6 +119,15 @@ class EmployeeEditItem : AppCompatActivity() {
                 .setPositiveButton(android.R.string.ok, null)
                 .show()
         }
+        else if(itemPrice === null || itemPrice.text.isBlank())
+        {
+            allGood = false
+            AlertDialog.Builder(this)
+                .setTitle("Input for Item Price is blank")
+                .setMessage("Please, enter Price")
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+        }
         else
         {
             allGood = true
@@ -133,6 +142,7 @@ class EmployeeEditItem : AppCompatActivity() {
             myRef.child(getString(R.string.path_barcode)).setValue(itemBarCode.text.toString())
             myRef.child(getString(R.string.path_details)).setValue(itemDetails.text.toString())
             myRef.child(getString(R.string.path_qty)).setValue(itemQty.text.toString())
+            myRef.child(getString(R.string.path_price)).setValue(itemPrice.text.toString())
             AlertDialog.Builder(this)
                 .setTitle("Saved!")
                 .setPositiveButton(android.R.string.ok, null)
