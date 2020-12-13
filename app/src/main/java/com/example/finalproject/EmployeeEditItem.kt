@@ -1,5 +1,6 @@
 package com.example.finalproject
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -34,24 +35,19 @@ class EmployeeEditItem : AppCompatActivity() {
 
     private fun getAllData()
     {
-        var updateRef = MainActivity.database.reference.child("store").child("ProductData").child("NewItem" + myCode.textContent)
-
-        updateRef.addValueEventListener(object : ValueEventListener {
+        println("AAAAAAAAAAAAAAFFFTTTTTTTTTEEERRRRRRRRRRRR!!!!" +  intent.getStringExtra("ITEM_ID"));
+        val myRef = MainActivity.database.reference.child("store").child("ProductData").child("NewItem" + intent.getStringExtra("ITEM_ID"))
+        myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-
-                findViewById<EditText>(R.id.editTextItemNameInfoEdit).setText(dataSnapshot.child("NewItem" + myCode.textContent).value.toString())
-                findViewById<EditText>(R.id.editTextSizeInfoEdit).setText(dataSnapshot.child(getString(R.string.path_size)).value.toString())
-                findViewById<EditText>(R.id.editTextExpireDateInfoEdit).setText(dataSnapshot.child(getString(R.string.path_exp_date)).value.toString())
-                findViewById<EditText>(R.id.editTextBarcodeInfoEdit).setText(dataSnapshot.child(getString(R.string.path_barcode)).value.toString())
-                findViewById<EditText>(R.id.editTextDetailInfoInfoEdit).setText(dataSnapshot.child(getString(R.string.path_details)).value.toString())
-                findViewById<EditText>(R.id.editTextQtyInfoEdit).setText(dataSnapshot.child(getString(R.string.path_qty)).value.toString())
-
-                val itemNameEdit = findViewById<EditText>(R.id.editTextItemNameInfoEdit)
-                val itemSizeEdit  = findViewById<EditText>(R.id.editTextSizeInfoEdit)
-                val itemExpDateEdit  = findViewById<EditText>(R.id.editTextExpireDateInfoEdit)
-                val itemBarCodeEdit  = findViewById<EditText>(R.id.editTextBarcodeInfoEdit)
-                val itemDetailsEdit  = findViewById<EditText>(R.id.editTextDetailInfoInfoEdit)
-                val itemQtyEdit  = findViewById<EditText>(R.id.editTextQtyInfoEdit)
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                findViewById<EditText>(R.id.editNameblBL).setText(dataSnapshot.child(getString(R.string.path_name)).value.toString())
+                findViewById<EditText>(R.id.editExpire).setText(dataSnapshot.child(getString(R.string.path_exp_date)).value.toString())
+                findViewById<EditText>(R.id.editSize).setText(dataSnapshot.child(getString(R.string.path_size)).value.toString())
+                findViewById<EditText>(R.id.editBarcode).setText(dataSnapshot.child(getString(R.string.path_barcode)).value.toString())
+                findViewById<EditText>(R.id.editDetail).setText(dataSnapshot.child(getString(R.string.path_details)).value.toString())
+                findViewById<EditText>(R.id.editQty).setText(dataSnapshot.child(getString(R.string.path_qty)).value.toString())
+                println(dataSnapshot.child("Name").value)
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -60,6 +56,130 @@ class EmployeeEditItem : AppCompatActivity() {
             }
         })
     }
+    private fun basicWrite() {
+        var allGood = true
+        val itemName = findViewById<EditText>(R.id.editNameblBL)
+        val itemSize = findViewById<EditText>(R.id.editExpire)
+        val itemExpDate = findViewById<EditText>(R.id.editSize)
+        val itemBarCode = findViewById<EditText>(R.id.editBarcode)
+        val itemDetails = findViewById<EditText>(R.id.editDetail)
+        val itemQty = findViewById<EditText>(R.id.editQty)
+
+        if(itemName === null || itemName.text.isBlank())
+        {
+            allGood = false
+            AlertDialog.Builder(this)
+                .setTitle("Input for Item Name is blank")
+                .setMessage("Please, enter Name")
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+        }
+        else if(itemSize === null || itemSize.text.isBlank())
+        {
+            allGood = false
+            AlertDialog.Builder(this)
+                .setTitle("Input for Item Size is blank")
+                .setMessage("Please, enter Size")
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+        }
+        else if(itemExpDate === null || itemExpDate.text.isBlank())
+        {
+            allGood = false
+            AlertDialog.Builder(this)
+                .setTitle("Input for Item Expire Date is blank")
+                .setMessage("Please, enter Expire Date")
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+        }
+        else if(itemBarCode === null || itemBarCode.text.isBlank())
+        {
+            allGood = false
+            AlertDialog.Builder(this)
+                .setTitle("Input for Item BarCode is blank")
+                .setMessage("Please, enter BarCode")
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+        }
+        else if(itemDetails === null || itemDetails.text.isBlank())
+        {
+            allGood = false
+            AlertDialog.Builder(this)
+                .setTitle("Input for Item Detail Info is blank")
+                .setMessage("Please, enter Item Details")
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+        }
+        else if(itemQty === null || itemQty.text.isBlank())
+        {
+            allGood = false
+            AlertDialog.Builder(this)
+                .setTitle("Input for Item Quantity is blank")
+                .setMessage("Please, enter Quantity")
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+        }
+        else
+        {
+            allGood = true
+        }
+
+        if( allGood === true)
+        {
+            val myRef = MainActivity.database.reference.child("store").child("ProductData").child("NewItem" + itemBarCode.text)
+            myRef.child(getString(R.string.path_name)).setValue(itemName.text.toString())
+            myRef.child(getString(R.string.path_size)).setValue(itemSize.text.toString())
+            myRef.child(getString(R.string.path_exp_date)).setValue(itemExpDate.text.toString())
+            myRef.child(getString(R.string.path_barcode)).setValue(itemBarCode.text.toString())
+            myRef.child(getString(R.string.path_details)).setValue(itemDetails.text.toString())
+            myRef.child(getString(R.string.path_qty)).setValue(itemQty.text.toString())
+            AlertDialog.Builder(this)
+                .setTitle("Saved!")
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+            val intent = Intent(this, EmployeeHome::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //    private fun updateItem(itemName: String, itemSize: String, itemExpDate: String, itemBarCode: String, itemDetails: String, itemQty: String) {
 //        // Create new post at /user-posts/$userid/$postid and at

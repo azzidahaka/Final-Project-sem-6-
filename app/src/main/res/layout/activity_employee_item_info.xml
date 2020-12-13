@@ -17,7 +17,7 @@
         android:text="@string/edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextQtyInfoEdit"
+        app:layout_constraintTop_toBottomOf="@+id/iQtyInfo"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -32,11 +32,11 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonEditItemInfo"
         app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextQtyInfoEdit"
+        app:layout_constraintTop_toBottomOf="@+id/iQtyInfo"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextItemNameInfoEdit"
+        android:id="@+id/iNameInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -46,10 +46,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEditProductInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/productInfo" />
 
     <EditText
-        android:id="@+id/editTextBarcodeInfoEdit"
+        android:id="@+id/iBarInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -59,10 +59,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSizeInfoEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/iSizeInfo" />
 
     <EditText
-        android:id="@+id/editTextQtyInfoEdit"
+        android:id="@+id/iQtyInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -72,10 +72,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDetailInfoInfoEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/editDetail" />
 
     <EditText
-        android:id="@+id/editTextSizeInfoEdit"
+        android:id="@+id/iSizeInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -85,10 +85,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextExpireDateInfoEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/editExpire" />
 
     <TextView
-        android:id="@+id/textViewEditProductInfo"
+        android:id="@+id/productInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/item_info"
@@ -98,7 +98,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextDetailInfoInfoEdit"
+        android:id="@+id/editDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -108,10 +108,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBarcodeInfoEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/iBarInfo" />
 
     <EditText
-        android:id="@+id/editTextExpireDateInfoEdit"
+        android:id="@+id/editExpire"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -121,5 +121,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextItemNameInfoEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/iNameInfo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
