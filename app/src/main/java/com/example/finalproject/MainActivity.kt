@@ -9,6 +9,7 @@ import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
+    //our path to the actual database
     companion object {
         var database = Firebase.database
     }
