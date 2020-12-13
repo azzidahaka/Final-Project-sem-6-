@@ -38,9 +38,9 @@ class CustomerHome : AppCompatActivity() {
 
     fun onScannerClick(view: View) {
         //call camera activity
-        val intent = Intent(this, CameraOpen::class.java)
-        startActivity(intent)
-        finish()
+//        val intent = Intent(this, CameraOpen::class.java)
+//        startActivity(intent)
+//        finish()
     }
 
     fun onCustomerInfoClick(view: View) {

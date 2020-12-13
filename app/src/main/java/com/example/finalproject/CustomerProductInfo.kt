@@ -13,8 +13,8 @@ class CustomerProductInfo : AppCompatActivity() {
 
     fun onBackClick(view: View) {
         //call camera activity
-        val intent = Intent(this, CameraOpen::class.java)
-        startActivity(intent)
+//        val intent = Intent(this, CameraOpen::class.java)
+//        startActivity(intent)
     }
 
     fun onDetailedInfoClick(view: View) {
