@@ -33,11 +33,6 @@ class EmployeeHome : AppCompatActivity() {
             if (result.contents === null) {
                 Toast.makeText(this, "cancelled", Toast.LENGTH_SHORT).show()
             } else {
-//                Toast.makeText(this, "Scanned -> " + result.contents, Toast.LENGTH_SHORT)
-//                        .show()
-                //itemIdEmployee.text = result.contents
-
-                println("BEEEEEEEEEEEFFFFFFFOOOOOORRRRRRRREEEE!!!!" + result.contents);
                 val intent = Intent(this, EmployeeItemInfo::class.java)
                 intent.putExtra ( "ITEM_ID", result.contents );
                 startActivity(intent)

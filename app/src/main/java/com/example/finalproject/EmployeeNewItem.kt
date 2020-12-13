@@ -32,6 +32,7 @@ class EmployeeNewItem : AppCompatActivity() {
         val itemBarCode = findViewById<EditText>(R.id.editTextBarcode)
         val itemDetails = findViewById<EditText>(R.id.editTextDetailInfo)
         val itemQty = findViewById<EditText>(R.id.editTextQty)
+        val itemPrice = findViewById<EditText>(R.id.editTextPrice)
 
         if(itemName === null || itemName.text.isBlank())
         {
@@ -87,6 +88,15 @@ class EmployeeNewItem : AppCompatActivity() {
                 .setPositiveButton(android.R.string.ok, null)
                 .show()
         }
+        else if(itemPrice === null || itemPrice.text.isBlank())
+        {
+            allGood = false
+            AlertDialog.Builder(this)
+                .setTitle("Input for Item Price is blank")
+                .setMessage("Please, enter Price")
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+        }
         else
         {
             allGood = true
@@ -101,6 +111,7 @@ class EmployeeNewItem : AppCompatActivity() {
             myRef.child(getString(R.string.path_barcode)).setValue(itemBarCode.text.toString())
             myRef.child(getString(R.string.path_details)).setValue(itemDetails.text.toString())
             myRef.child(getString(R.string.path_qty)).setValue(itemQty.text.toString())
+            myRef.child(getString(R.string.path_price)).setValue(itemPrice.text.toString())
             AlertDialog.Builder(this)
                 .setTitle("Saved!")
                 .setPositiveButton(android.R.string.ok, null)

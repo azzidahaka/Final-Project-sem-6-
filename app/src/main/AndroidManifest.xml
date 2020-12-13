@@ -16,8 +16,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProject">
-        <activity android:name=".Scan"></activity>
-        <activity android:name=".CameraOpen" />
 
         <meta-data
             android:name="com.google.mlkit.vision.DEPENDENCIES"

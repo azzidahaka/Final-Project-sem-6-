@@ -26,7 +26,6 @@ class EmployeeItemInfo : AppCompatActivity() {
 
     private fun readItemFromDatabase()
     {
-        println("AAAAAAAAAAAAAAFFFTTTTTTTTTEEERRRRRRRRRRRR!!!!" +  intent.getStringExtra("ITEM_ID"));
         val myRef = MainActivity.database.reference.child("store").child("ProductData").child("NewItem" + intent.getStringExtra("ITEM_ID"))
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {

@@ -14,7 +14,6 @@
     <string name="product_info">Информация О Продукте</string>
     <string name="edit_product">Изменить Продукт</string>
     <string name="edit">Изменить</string>
-    <string name="choose">Выбрать Магазин</string>
     <string name="user_info">Информация о Покупателе</string>
     <string name="basic_info">Общая Информация</string>
     <string name="detailed_info">Подробная Информация</string>
@@ -42,4 +41,5 @@
     <string name="item_qty">количество</string>
     <string name="item_info">Информация о Продукте</string>
     <string name="update_item">Обновить Информацию</string>
+    <string name="item_price">стоимость товара</string>
 </resources>
