@@ -19,11 +19,12 @@ class EmployeeItemInfo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_employee_item_info)
         readItemFromDatabase()
+
     }
 
     private fun readItemFromDatabase()
     {
-        val myRef = MainActivity.database.reference.child("store").child("name").child("NewItem" + EmployeeHome.itemIdEmployee)
+        val myRef = MainActivity.database.reference.child("store").child("name").child("NewItem" + intent.getStringExtra("ITEM_ID"))
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 // This method is called once with the initial value and again

@@ -25,22 +25,9 @@ class CustomerHome : AppCompatActivity() {
             findViewById<TextView>(R.id.textViewUserActualName).text = getString(R.string.hello) + "  " + userName;
         }
     }
-//
-//    lateinit var mCamera: Camera
-//
-//    var options = BarcodeScannerOptions.Builder()
-//            .setBarcodeFormats(
-//                    Barcode.FORMAT_EAN_13,
-//                    Barcode.FORMAT_EAN_8,
-//                    Barcode.FORMAT_CODE_93
-//            ).build()
-//
 
     fun onScannerClick(view: View) {
-        //call camera activity
-//        val intent = Intent(this, CameraOpen::class.java)
-//        startActivity(intent)
-//        finish()
+
     }
 
     fun onCustomerInfoClick(view: View) {
